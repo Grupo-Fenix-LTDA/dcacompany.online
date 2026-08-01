@@ -1,0 +1,289 @@
+<!-- 2fd56d3ea736ef95 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Carregando...</title>
+    
+    <style>
+        :root {
+            --primary-color: #111827;
+            --secondary-color: #DC2626;
+            --accent-color: #6B7280;
+            --text-dark: #0F172A;
+            --text-light: #64748B;
+            --bg-light: #F8FAFC;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --success-color: #16A34A;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-dark); background-color: var(--white); line-height: 1.6; scroll-behavior: smooth; }
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .hqc8_nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .hqc8_logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-color); text-decoration: none; letter-spacing: 2px; text-transform: uppercase; }
+        .hqc8_logo span { color: var(--secondary-color); }
+        .hqc8_nav-menu { display: flex; list-style: none; gap: 20px; }
+        .hqc8_nav-menu a { text-decoration: none; color: var(--text-light); font-weight: 500; transition: color 0.3s; }
+        .hqc8_nav-menu a:hover { color: var(--secondary-color); }
+        .hqc8_hero { background: linear-gradient(135deg, #111827 0%, #1F2937 100%); color: var(--white); padding: 90px 20px; text-align: center; border-bottom: 4px solid var(--secondary-color); }
+        .hqc8_hero-content { max-width: 800px; margin: 0 auto; }
+        .hqc8_hero h1 { font-size: 2.8rem; color: var(--white); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
+        .hqc8_hero h1 em { color: var(--secondary-color); font-style: normal; }
+        .hqc8_hero p { font-size: 1.15rem; color: #94A3B8; margin-bottom: 30px; }
+        .hqc8_btn { display: inline-block; background-color: var(--secondary-color); color: var(--white); padding: 15px 35px; border-radius: var(--border-radius); text-decoration: none; font-weight: 800; transition: background 0.3s, transform 0.2s; border: none; cursor: pointer; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .hqc8_btn:hover { background-color: #991B1B; transform: translateY(-2px); }
+        .hqc8_collections-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .hqc8_section-title { text-align: center; color: var(--primary-color); font-size: 2rem; margin-bottom: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
+        .hqc8_section-subtitle { text-align: center; color: var(--text-light); max-width: 620px; margin: 0 auto 40px auto; font-size: 1.05rem; }
+        .hqc8_collections-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 30px; }
+        .hqc8_collection-card { background: var(--white); border: 1px solid #E5E7EB; border-radius: var(--border-radius); padding: 30px 25px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-top: 3px solid var(--secondary-color); }
+        .hqc8_collection-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(0,0,0,0.08); border-top-color: var(--primary-color); }
+        .hqc8_collection-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .hqc8_collection-card h3 { color: var(--primary-color); font-size: 1.15rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .hqc8_collection-card p { color: var(--text-light); font-size: 0.95rem; }
+        .hqc8_trust-section { background-color: #F8FAFC; padding: 60px 20px; border-top: 1px solid #E5E7EB; }
+        .hqc8_trust-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .hqc8_trust-card { background: var(--white); padding: 30px; border-radius: var(--border-radius); border: 1px solid #E5E7EB; box-shadow: 0 4px 12px rgba(0,0,0,0.01); border-left: 4px solid var(--secondary-color); }
+        .hqc8_trust-card h3 { color: var(--primary-color); margin-bottom: 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .hqc8_trust-card h3::before { content: "✓"; color: var(--secondary-color); font-weight: bold; font-size: 1.4rem; }
+        .hqc8_trust-card p { color: var(--text-light); font-size: 0.95rem; }
+        .hqc8_disclosure-section { background-color: var(--white); padding: 60px 20px; border-top: 1px solid #E5E7EB; }
+        .hqc8_disclosure-container { max-width: 1200px; margin: 0 auto; }
+        .hqc8_disclosure-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: var(--white); border-radius: var(--border-radius); overflow: hidden; border: 1px solid #E5E7EB; }
+        .hqc8_disclosure-table th, .hqc8_disclosure-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #E5E7EB; }
+        .hqc8_disclosure-table th { background-color: #F3F4F6; color: var(--primary-color); font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; }
+        .hqc8_disclosure-note { font-size: 0.85rem; color: var(--text-light); text-align: justify; background: var(--bg-light); padding: 20px; border-radius: var(--border-radius); border: 1px solid #E5E7EB; }
+        .hqc8_contact-section { background: linear-gradient(135deg, var(--primary-color) 0%, #030712 100%); color: var(--white); padding: 60px 20px; border-top: 4px solid var(--secondary-color); }
+        .hqc8_contact-container { max-width: 550px; margin: 0 auto; }
+        .hqc8_contact-form { background: var(--white); padding: 40px; border-radius: var(--border-radius); box-shadow: 0 10px 25px rgba(0,0,0,0.15); color: var(--text-dark); }
+        .hqc8_form-group { margin-bottom: 20px; }
+        .hqc8_form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .hqc8_form-group input, .hqc8_form-group select, .hqc8_form-group textarea { width: 100%; padding: 12px 15px; border: 1px solid #D1D5DB; border-radius: var(--border-radius); font-size: 1rem; outline: none; transition: border-color 0.3s; font-family: inherit; }
+        .hqc8_form-group textarea { resize: vertical; min-height: 90px; }
+        .hqc8_form-group input:focus, .hqc8_form-group select:focus, .hqc8_form-group textarea:focus { border-color: var(--secondary-color); }
+        .hqc8_success-message { display: none; background-color: #DCFCE7; border: 2px solid var(--success-color); color: var(--primary-color); padding: 30px; border-radius: var(--border-radius); text-align: center; }
+        .hqc8_success-message h3 { margin-bottom: 10px; color: #15803D; }
+        footer { background-color: #030712; color: #94A3B8; padding: 60px 20px 20px 20px; font-size: 0.9rem; border-top: 4px solid var(--secondary-color); }
+        .hqc8_footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .hqc8_footer-brand h4 { color: var(--white); font-size: 1.2rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .hqc8_footer-links h4, .hqc8_footer-contact h4 { color: var(--white); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .hqc8_footer-links ul { list-style: none; }
+        .hqc8_footer-links ul li { margin-bottom: 10px; }
+        .hqc8_footer-links ul li a { color: #94A3B8; text-decoration: none; transition: color 0.3s; }
+        .hqc8_footer-links ul li a:hover { color: var(--secondary-color); }
+        .hqc8_footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 30px; border-top: 1px solid #1F2937; text-align: center; font-size: 0.8rem; }
+        @media (max-width: 768px) {
+            .hqc8_nav-container { flex-direction: column; gap: 15px; }
+            .hqc8_hero h1 { font-size: 1.9rem; }
+            .hqc8_disclosure-table { display: block; overflow-x: auto; }
+            .hqc8_contact-form { padding: 25px; }
+        }
+    </style>
+
+<link rel="canonical" href="https://dcacompany.online/">
+<meta name="description" content="dcacompany.online oferece conteúdo de qualidade e informações confiáveis. Acesse e confira todos os detalhes.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dcacompany.online/">
+<meta property="og:site_name" content="dcacompany.online">
+<meta property="og:description" content="dcacompany.online oferece conteúdo de qualidade e informações confiáveis. Acesse e confira todos os detalhes.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="dcacompany.online">
+<meta name="generator" content="cms-9af683e68a9b">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dcacompany","url":"https://dcacompany.online/","datePublished":"2024-07-21","dateModified":"2025-03-17","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"Dcacompany","url":"https://dcacompany.online/"},"publisher":{"@type":"Organization","name":"Dcacompany","url":"https://dcacompany.online/"}}</script>
+
+<style>:root{--zaks-p:rgb(239,81,15);--zaks-s:rgb(0,83,140);--zaks-id:'c58df7d8a983'}@keyframes pazxbeya{from{opacity:1}to{opacity:1}}.qiettc{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}</style>
+<!-- b:z8t3oxhv65 v3.48.166 -->
+</head>
+<body data-s="2841ffff" data-p="t52pl0">
+<noscript><div style="padding:16px;text-align:center;font-size:13px;"><p>Ative o JavaScript para acessar todo o conteúdo de dcacompany.</p></div></noscript>
+    <header>
+        <nav class="hqc8_nav-container">
+            <a href="#" class="hqc8_logo" id="header-logo"></a>
+            <ul class="hqc8_nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#colecoes">Coleções</a></li>
+                <li><a href="#confianca">Sobre Nós</a></li>
+                <li><a href="#garantias">Trocas e Garantia</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hqc8_hero" id="home">
+        <div class="hqc8_hero-content">
+            <h1>Vestuário Urbano com <em>Assinatura</em></h1>
+            <p id="hero-description"></p>
+            <a href="#contato" class="hqc8_btn">Agendar Showroom</a>
+        </div>
+    </section>
+
+    <section class="hqc8_collections-section" id="colecoes">
+        <h2 class="hqc8_section-title">Nossas Coleções</h2>
+        <p class="hqc8_section-subtitle">Uma linha de vestuário e acessórios pensada para o dia a dia urbano — atendendo consumidores finais pelas nossas plataformas digitais e lojistas parceiros por nosso programa de atacado.</p>
+        <div class="hqc8_collections-grid">
+            <div class="hqc8_collection-card"><div class="hqc8_collection-icon">👕</div><h3>Camisetas e Regatas</h3><p>Peças básicas e estampadas em algodão de alta gramatura, com modelagem contemporânea e caimento consistente do PP ao GG.</p></div>
+            <div class="hqc8_collection-card"><div class="hqc8_collection-icon">🧥</div><h3>Moletons e Casacos</h3><p>Moletons cropped e oversized, hoodies, blusas de frio, jaquetas e casacos de tecidos técnicos para o outono e o inverno urbano.</p></div>
+            <div class="hqc8_collection-card"><div class="hqc8_collection-icon">👖</div><h3>Calças e Bermudas</h3><p>Calças cargo, jogger, wide leg, jeans em diferentes lavagens e bermudas para compor o look casual completo.</p></div>
+            <div class="hqc8_collection-card"><div class="hqc8_collection-icon">🧢</div><h3>Acessórios</h3><p>Bonés, mochilas, riñoneras, meias, óculos e complementos que fecham o visual — todos com padrão de acabamento da marca.</p></div>
+            <div class="hqc8_collection-card"><div class="hqc8_collection-icon">✨</div><h3>Coleções Cápsula</h3><p>Peças de tiragem limitada e edições especiais lançadas periodicamente — colaborações e drops assinados que saem tão rápido quanto chegam.</p></div>
+            <div class="hqc8_collection-card"><div class="hqc8_collection-icon">🏷️</div><h3>Atacado para Lojistas</h3><p>Programa dedicado a lojas físicas, e-commerces multimarcas e revendedores, com catálogo digital, pedido mínimo acessível e condições comerciais especiais.</p></div>
+        </div>
+    </section>
+
+    <section class="hqc8_trust-section" id="confianca">
+        <h2 class="hqc8_section-title">Sobre a DCA Company</h2>
+        <p class="hqc8_section-subtitle">Desde 2020, com showroom e escritório na Barra Funda, em São Paulo, produzindo e distribuindo vestuário urbano com identidade própria — tanto para consumidor final via canais digitais quanto para lojistas parceiros pelo nosso programa de atacado.</p>
+        <div class="hqc8_trust-grid">
+            <div class="hqc8_trust-card"><h3>Curadoria de Produto</h3><p>Cada peça passa por prova de caimento, teste de conforto e verificação de acabamento antes de entrar na coleção — controle direto que se traduz em consistência entre lotes e menor índice de trocas por desconformidade.</p></div>
+            <div class="hqc8_trust-card"><h3>Atendimento Consultivo B2B</h3><p>Programa de atacado com atendimento por consultor comercial dedicado, catálogo digital atualizado a cada coleção, apoio na montagem do mix e condições diferenciadas para novos lojistas e clientes recorrentes.</p></div>
+            <div class="hqc8_trust-card"><h3>Showroom para Visita Agendada</h3><p>Nosso showroom na Barra Funda recebe lojistas, buyers e imprensa por agendamento prévio — para conhecer as peças da coleção pessoalmente, tirar dúvidas técnicas e fechar pedidos de atacado.</p></div>
+        </div>
+    </section>
+
+    <section class="hqc8_disclosure-section" id="garantias">
+        <div class="hqc8_disclosure-container">
+            <h2 class="hqc8_section-title">Trocas, Garantia e Direitos</h2>
+            <p class="hqc8_section-subtitle">Em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990) e com a Portaria INMETRO nº 2/2008, que regulamenta a etiquetagem obrigatória de produtos têxteis comercializados no Brasil:</p>
+            <table class="hqc8_disclosure-table">
+                <thead><tr><th>Item</th><th>Condição / Prazo</th><th>Observações Adicionais</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Garantia Legal</strong></td><td><strong>30 dias</strong> a partir do recebimento</td><td>Prevista no art. 26 do CDC para vícios aparentes em peças de vestuário (produtos não duráveis).</td></tr>
+                    <tr><td><strong>Etiquetagem Têxtil</strong></td><td>Portaria INMETRO nº 2/2008</td><td>Composição do tecido, tamanho, país de origem e símbolos de conservação em etiqueta permanente conforme legislação.</td></tr>
+                    <tr><td><strong>Direito de Arrependimento</strong></td><td><strong>7 dias corridos</strong></td><td>Aplicável a compras realizadas fora do estabelecimento físico (art. 49 do CDC).</td></tr>
+                    <tr><td><strong>Troca por Tamanho</strong></td><td>Até <strong>7 dias</strong> após o recebimento</td><td>Peça sem uso, com etiqueta original, embalagem preservada e nota fiscal.</td></tr>
+                    <tr><td><strong>Pedidos Atacado</strong></td><td>Prazo pactuado no contrato</td><td>Cronograma de produção e faturamento definidos com o consultor comercial, com sinal e saldo conforme acordo.</td></tr>
+                    <tr><td><strong>Coleções Cápsula</strong></td><td>Tiragem limitada</td><td>Séries exclusivas, sem reposição garantida — vendas por ordem de chegada.</td></tr>
+                    <tr><td><strong>Prazo de Entrega</strong></td><td>De <strong>3 a 12 dias úteis</strong></td><td>Varia conforme região; retirada no showroom por agendamento prévio.</td></tr>
+                    <tr><td><strong>Formas de Pagamento</strong></td><td>PIX, cartão, boleto e faturamento</td><td>Faturamento diferenciado (30/60/90 dias) para lojistas cadastrados, sujeito à análise de crédito.</td></tr>
+                </tbody>
+            </table>
+            <div class="hqc8_disclosure-note" id="disclosure-example-note"></div>
+        </div>
+    </section>
+
+    <section class="hqc8_contact-section" id="contato">
+        <div class="hqc8_contact-container">
+            <h2 class="hqc8_section-title" style="color: var(--white);">Fale Conosco</h2>
+            <p class="hqc8_section-subtitle" style="color: #94A3B8;">Preencha o formulário abaixo e retornaremos em até 2 horas úteis com informações sobre coleção, agendamento do showroom, condições comerciais para atacado ou dúvidas sobre nossas peças.</p>
+            <form class="hqc8_contact-form" id="lead-form">
+                <div class="hqc8_form-group"><label for="form-name">Nome Completo</label><input type="text" id="form-name" placeholder="Ex: Ana Souza" required></div>
+                <div class="hqc8_form-group"><label for="form-email">E-mail</label><input type="email" id="form-email" placeholder="Ex: ana@email.com" required></div>
+                <div class="hqc8_form-group"><label for="form-phone">Telefone / WhatsApp</label><input type="tel" id="form-phone" placeholder="Ex: (11) 99999-0000" required></div>
+                <div class="hqc8_form-group">
+                    <label for="form-intent">Tipo de Contato</label>
+                    <select id="form-intent" required>
+                        <option value="">Selecione uma opção...</option>
+                        <option value="varejo">Compra Individual (varejo)</option>
+                        <option value="atacado">Compra em Atacado / Revenda</option>
+                        <option value="showroom">Agendar Visita ao Showroom</option>
+                        <option value="capsula">Dúvidas sobre Coleção Cápsula</option>
+                        <option value="troca">Troca ou Devolução</option>
+                        <option value="imprensa">Imprensa / Parcerias</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="hqc8_form-group"><label for="form-message">Detalhes (opcional)</label><textarea id="form-message" placeholder="Ex: coleção de interesse, quantidade, cidade, prazo desejado..."></textarea></div>
+                <button type="submit" class="hqc8_btn" style="width: 100%; margin-top: 10px;">Enviar Solicitação</button>
+            </form>
+            <div class="hqc8_success-message" id="form-success">
+                <h3>✓ Solicitação Recebida com Sucesso!</h3>
+                <p>Olá, <strong id="user-name-span"></strong>. Seu contato foi registrado.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-light);">Retornaremos em breve pelo canal indicado.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="hqc8_footer-container">
+            <div class="hqc8_footer-brand" id="footer-brand-info"></div>
+            <div class="hqc8_footer-links">
+                <h4>Políticas e Termos</h4>
+                <ul>
+                    <li><a id="link-privacy" href="#" target="_blank">Política de Privacidade</a></li>
+                    <li><a id="link-terms" href="#" target="_blank">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="hqc8_footer-contact" id="footer-contact-info"></div>
+        </div>
+        <div class="hqc8_footer-bottom">
+            <p id="footer-correspondent-law"></p>
+            <p style="margin-top: 10px;">&copy; <span id="copyright-year"></span> <span id="copyright-legal-name"></span>. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const CONFIG = {
+            tradeName: "DCA Company",
+            legalName: "DCA Company LTDA",
+            cnpj: "36.653.635/0001-35",
+            address: "Av. Marquês de São Vicente, 230, Sala 1607, Várzea da Barra Funda, São Paulo – SP, CEP 01139-000",
+            phone: "(11) 2950-3309",
+            email: "contato@dcacompany.com.br",
+            privacyUrl: "https://dcacompany.com.br/privacidade.html",
+            termsUrl: "https://dcacompany.com.br/termos.html",
+            segment: "Comércio Varejista e Atacadista de Vestuário e Acessórios"
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('page-title').innerText = `${CONFIG.tradeName} | Vestuário e Acessórios com Showroom e Atacado em São Paulo`;
+            document.getElementById('page-description').setAttribute('content', `${CONFIG.tradeName} — marca de vestuário urbano com showroom na Barra Funda, São Paulo. Peças autorais para consumidor final e programa de atacado para lojistas.`);
+            
+            const nameParts = CONFIG.tradeName.split(' ');
+            const firstWord = nameParts[0];
+            const restOfName = nameParts.slice(1).join(' ');
+            document.getElementById('header-logo').innerHTML = restOfName
+                ? `${firstWord}<span> ${restOfName}</span>`
+                : firstWord;
+
+            document.getElementById('hero-description').innerHTML = `Desde 2020, com base na Barra Funda, em São Paulo, produzindo e distribuindo vestuário e acessórios urbanos — para consumidores finais pelos nossos canais digitais e para lojistas parceiros pelo programa de atacado, com showroom aberto para visitas agendadas.`;
+            
+            document.getElementById('disclosure-example-note').innerHTML = `<strong>Observações sobre etiquetagem, atacado e coleções especiais:</strong> <br> Todas as peças comercializadas pela ${CONFIG.tradeName} acompanham etiqueta permanente com composição do tecido, tamanho, país de origem e símbolos de conservação, conforme a Portaria INMETRO nº 2/2008. Pedidos de atacado (CNAE 46.42-7-01) são formalizados por contrato com prazo de produção, cronograma de faturamento e condições comerciais definidas com o consultor. Coleções cápsula têm tiragem limitada e são vendidas por ordem de chegada, sem garantia de reposição. As garantias legais previstas no Código de Defesa do Consumidor são cumulativas com as políticas comerciais da marca.`;
+
+            document.getElementById('footer-brand-info').innerHTML = `
+                <h4>${CONFIG.tradeName}</h4>
+                <p><strong>${CONFIG.legalName}</strong></p>
+                <p>CNPJ: ${CONFIG.cnpj}</p>
+                <br>
+                <p>Endereço: ${CONFIG.address}</p>
+            `;
+
+            document.getElementById('link-privacy').href = CONFIG.privacyUrl;
+            document.getElementById('link-terms').href = CONFIG.termsUrl;
+
+            document.getElementById('footer-contact-info').innerHTML = `
+                <h4>Atendimento</h4>
+                <p>Telefone: ${CONFIG.phone}</p>
+                <p>E-mail: <a href="mailto:${CONFIG.email}" style="color: #94A3B8; text-decoration: none;">${CONFIG.email}</a></p>
+            `;
+
+            document.getElementById('footer-correspondent-law').innerHTML = `A <strong>${CONFIG.tradeName}</strong> (${CONFIG.legalName}) atua no ramo de ${CONFIG.segment.toLowerCase()}, em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990) e com a Portaria INMETRO nº 2/2008, que regulamenta a etiquetagem obrigatória de produtos têxteis comercializados no Brasil. Imagens meramente ilustrativas. Preços, disponibilidade e condições comerciais estão sujeitos a confirmação no ato do pedido.`;
+
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            document.getElementById('copyright-legal-name').textContent = CONFIG.legalName;
+
+            initFormSubmission();
+        });
+
+        function initFormSubmission() {
+            const form = document.getElementById('lead-form');
+            const successBox = document.getElementById('form-success');
+            const userNameSpan = document.getElementById('user-name-span');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                const inputName = document.getElementById('form-name').value;
+                userNameSpan.innerText = inputName;
+                form.style.display = 'none';
+                successBox.style.display = 'block';
+            });
+        }
+    </script>
+<footer style="text-align:center;padding:22px 15px;font-size:10px;color:#b0b0b0;margin-top:45px;border-top:1px solid #e8e8e8"><p>Copyright © 2024 Dcacompany. Conteúdo protegido. As informações nesta página são de caráter informativo. | <a href="https://dcacompany.online/" style="color:#b0b0b0;text-decoration:none">dcacompany.online</a></p></footer>
+</body>
+</html>
+
+<!-- 0e85feaf6b4fe19c0cdf7255 -->
